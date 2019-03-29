@@ -10,7 +10,7 @@
       <h2>{{m.IDMem}}</h2>
       <p>{{m.NameMem}}</p>
       <p>{{m.NicknameMem}}</p>
-      <button ion-button clear item-end>View</button>
+      <button ion-button clear item-end (click)="showDetail(m.id)">View</button>
     </ion-item>
   </ion-list>
 </ion-content>
