@@ -32,5 +32,8 @@ export class DetailPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
   }
-
+  showDetail(id)
+  {
+    this.navCtrl.push(DetailPage,{barberid:id});
+  }
 }

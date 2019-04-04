@@ -11,8 +11,8 @@ export class AboutPage {
   constructor(public navCtrl: NavController) {
 
   }
-  findMember(){
+  FindMember(){
     console.log(this.data.keyword);
-    this.navCtrl.push(ResultPage, {keyword: this.data.keyword})
+    this.navCtrl.push(ResultPage, {keyword: this.data.keyword});
   }
 }
