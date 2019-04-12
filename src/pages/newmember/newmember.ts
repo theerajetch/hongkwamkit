@@ -1,18 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HTTP } from '@ionic-native/http';
+//import { HTTP } from '@ionic-native/http';
 
 import { HttpClient } from '@angular/common/http';
 import { AlertController } from "ionic-angular";
 
 //import 'rxjs/add/operator/map';
 //import {Http} from '@angular/http';
-/**
- * Generated class for the NewmemberPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -47,6 +41,7 @@ export class NewmemberPage {
             this.showAlert("Success","Data added");
             this.navCtrl.popToRoot();
           }
+
         }
       );
     

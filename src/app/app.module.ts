@@ -14,7 +14,7 @@ import { NewmemberPage } from '../pages/newmember/newmember';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
-import { HttoClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HTTP } from '@ionic-native/http';
 
 @NgModule({
@@ -31,7 +31,7 @@ import { HTTP } from '@ionic-native/http';
   imports: [
     BrowserModule,
     HttpModule,
-    HttoClientModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

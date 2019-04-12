@@ -19,11 +19,14 @@ export class ResultPage {
   member:any=0;
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
     let mid=this.navParams.get('keyword');
-    let url = "http://localhost:8080/member/"+ mid ; 
+    let url = "http://localhost:8080/member/name/"+ mid ;
+    console.log(url)
+    this.http.get(url).map(res => res.json()).subscribe(data => {this.member = data});
   }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad ResultPage');
   }
-
+  showDetail(id){
+    this.navCtrl.push(DetailPage,{memberid: id});
+  }
 }

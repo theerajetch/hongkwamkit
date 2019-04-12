@@ -5,13 +5,14 @@
 </ion-header>
 
 <ion-content padding>
-    <button ion-button item-end (click)="showNewmember()">push</button>
   <ion-list>
     <ion-item *ngFor="let m of members">
       <h2>{{m.IDMem}}</h2>
       <p>{{m.NameMem}}</p>
       <p>{{m.NicknameMem}}</p>
-      <button ion-button clear item-end (click)="showDetail(m.id)">View</button>
+      <button ion-button clear item-end (click)="showDetail(m.IDMem)">View</button>
+      <button ion-button clear item-end (click)="deleteData(m.IDMem)">Delete</button>
     </ion-item>
   </ion-list>
+  <ion-icon ios="ios-add-circle" md="md-add-circle" (click)="showNewmember()" style="zoom:2.0;"></ion-icon>
 </ion-content>

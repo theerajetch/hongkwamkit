@@ -11,31 +11,31 @@
 </ion-header>
 
 <ion-content padding>
-  <form (ngsubmit)="addmember()">
+  <form (ngSubmit)="addmember()">
     <ion-list>
       <ion-item>
         <ion-label floating>รหัสสมาชิก</ion-label>
-        <ion-input type="text" name="IDMem" (ngmodel)="member.IDMem"></ion-input>
+        <ion-input type="text" name="IDMem" [(ngModel)]="member.IDMem"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>ชื่อสมาชิก</ion-label>
-        <ion-input type="text" name="NameMem" (ngmodel)="member.NameMem"></ion-input>
+        <ion-input type="text" name="NameMem" [(ngModel)]="member.NameMem"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>รหัสPass</ion-label>
-        <ion-input type="text" name="PassMem" (ngmodel)="member.PassMem"></ion-input>
+        <ion-input type="text" name="PassMem" [(ngModel)]="member.PassMem"></ion-input>
       </ion-item>
       <ion-item>
           <ion-label floating>ชื่อเล่น</ion-label>
-          <ion-input type="text" name="NicknameMem" (ngmodel)="member.NicknameMem"></ion-input>
+          <ion-input type="text" name="NicknameMem" [(ngModel)]="member.NicknameMem"></ion-input>
       </ion-item>
       <ion-item>
           <ion-label floating>อีเมล์</ion-label>
-          <ion-input type="text" name="EmailMem" (ngmodel)="member.EmailMem"></ion-input>
+          <ion-input type="text" name="EmailMem" [(ngModel)]="member.EmailMem"></ion-input>
       </ion-item>
       <ion-item>
           <ion-label floating>เบอร์ติดต่อ</ion-label>
-          <ion-input type="text" name="TelMem" (ngmodel)="member.TelMem"></ion-input>
+          <ion-input type="text" name="TelMem" [(ngModel)]="member.TelMem"></ion-input>
       </ion-item> 
     </ion-list>
     <button ion-button floating>save</button>

@@ -19,12 +19,13 @@ import 'rxjs/add/operator/map';
 export class DetailPage {
   member:any=0;
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
-    let mid=navParams.get('mid');
+    let mid=this.navParams.get('memberid');
     let url = "http://localhost:8080/member/"+ mid ;
+    console.log(url);
     this.http.get(url)
       .map(res=>res.json())
       .subscribe(data => {
-        this.member =data;
+        this.member=data;
 
       });
 
@@ -33,8 +34,5 @@ export class DetailPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
   }
-  showDetail(id)
-  {
-    this.navCtrl.push(DetailPage,{mid:id});
-  }
+  
 }
