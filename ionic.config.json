@@ -1,6 +1,8 @@
 {
   "name": "hongkwamkit",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
   "id": "f0329c8d"
 }

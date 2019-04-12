@@ -9,10 +9,13 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DetailPage } from '../pages/detail/detail';
 import { ResultPage } from '../pages/result/result';
+import { NewmemberPage } from '../pages/newmember/newmember';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
+import { HttoClientModule } from '@angular/common/http';
+import { HTTP } from '@ionic-native/http';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,13 @@ import { HttpModule } from '@angular/http';
     HomePage,
     TabsPage,
     DetailPage,
-    ResultPage
+    ResultPage,
+    NewmemberPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    HttoClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -37,12 +42,14 @@ import { HttpModule } from '@angular/http';
     HomePage,
     TabsPage,
     DetailPage,
-    ResultPage
+    ResultPage,
+    NewmemberPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HTTP
   ]
 })
 export class AppModule {}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
@@ -34,6 +35,6 @@ export class DetailPage {
   }
   showDetail(id)
   {
-    this.navCtrl.push(DetailPage,{barberid:id});
+    this.navCtrl.push(DetailPage,{mid:id});
   }
 }

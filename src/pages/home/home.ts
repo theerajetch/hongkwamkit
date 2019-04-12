@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DetailPage } from '../detail/detail';
+import { NewmemberPage } from '../newmember/newmember';
+
 //import { ResultPage } from '../result/result';
 
 import { Http } from '@angular/http';
@@ -26,5 +28,9 @@ export class HomePage {
   }
   showDetail(id){
     this.navCtrl.push(DetailPage,{mid: id});
+  
+  }
+  showNewmember(){
+    this.navCtrl.push(NewmemberPage);
   }
 }

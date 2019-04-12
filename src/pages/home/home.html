@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content padding>
+    <button ion-button item-end (click)="showNewmember()">push</button>
   <ion-list>
     <ion-item *ngFor="let m of members">
       <h2>{{m.IDMem}}</h2>
